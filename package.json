@@ -1,0 +1,73 @@
+{
+  "name": "wave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "rm -rf ./src/dist && gulp",
+    "build": "rm -rf ./src/dist && gulp img && gulp js && gulp build-html && gulp font",
+    "deploy": "rm -rf ./src/dist && gulp deploy && cd ./src/dist && surge --domain=https://wvt.surge.sh"
+  },
+  "options": {
+    "config": {
+      "tailwindjs": "./tailwind.config.js"
+    },
+    "paths": {
+      "root": "./",
+      "src": {
+        "base": "./src",
+        "css": "./src/css",
+        "js": "./src/js",
+        "img": "./src/img"
+      },
+      "dist": {
+        "base": "./dist",
+        "css": "./dist/css",
+        "js": "./dist/js",
+        "img": "./dist/img"
+      },
+      "build": {
+        "base": "./build",
+        "css": "./build/css",
+        "js": "./build/js",
+        "img": "./build/img"
+      }
+    }
+  },
+  "author": "olu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "autoprefixer": "^9.4.3",
+    "browser-sync": "^2.26.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-newer": "^1.4.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purgecss": "^1.1.1",
+    "gulp-purify-css": "^0.1.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "log-symbols": "^2.2.0",
+    "postcss-scss": "^2.0.0",
+    "purifycss-extended": "^1.3.6",
+    "tailwindcss": "^1.1.2"
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WaveTransfer</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body class="font-avenir antialiased leading-tigh text-normal">
+
+    <section class="h-full md:h-screen">
+        <header class="container mx-auto py-6">
+            <nav class="flex items-center justify-between flex-wrap bg-transparent">
+                <div class="mr-6">
+                    <a href="./index.html" title="Wave Transfer" class="flex items-center flex-shrink-0">
+                        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+                        </svg>
+                        <span class="font-semibold text-xl tracking-tight">WaveTransfer</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container mx-auto py-8 flex lg:flex-row flex-col items-center bg-no-repeat h-80">
+
+            <div class="w-full lg:w-1/2 px-4 lg:px-12 lg:text-left text-center">
+                <h1 class="mb-8 text-4xl md:text-6xl leading-20 text-blue">
+                    Create an account
+                </h1>
+                <p class="text-xl font-medium mb-12 leading-8">
+                    Start your journey 💫...
+                </p>
+                <!-- <figure class="relative rounded-lg overflow-hidden flex-grow-0 flex-shrink block">
+                    <img src="./img/contact.svg" alt="contact" class="w-full h-full block object-cover object-center">
+                </figure> -->
+            </div>
+
+            <div class="w-full lg:w-1/2 px-4 lg:px-12">
+                <div class="border-t-4 border-blue bg-white shadow-md rounded">
+                    <form class="px-8 pt-6 pb-8 mb-4">
+                        <div class="flex flex-wrap -mx-3 mb-8">
+                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label class="lg:text-lg" for="first-name">
+                                    First Name
+                                </label>
+                                <input class="border-red-500" autofocus id="first-name" type="text"
+                                    placeholder="Philip">
+                                <p class="flex items-center mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        class="h-6 w-6 mr-2 flex-shrink-0">
+                                        <circle cx="12" cy="12" r="10" fill="#fed7d7"></circle>
+                                        <path fill="#f56565"
+                                            d="M13.41 12l2.83 2.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 1 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12z">
+                                        </path>
+                                    </svg>
+                                    <span class="text-red-500 text-xs italic">Please enter your first name.</span>
+                                </p>
+                            </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <label class="lg:text-lg" for="last-name">
+                                    Last Name
+                                </label>
+                                <input id="last-name" type="text" placeholder="Templar">
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <label class="lg:text-lg" for="email">
+                                Email Address
+                            </label>
+                            <input type="email" placeholder="You@email.com">
+                        </div>
+                        <div class="mb-8">
+                            <label class="lg:text-lg" for="email">
+                                Password
+                            </label>
+                            <div class="relative">
+
+                                <input class="toggle-input" type="password"
+                                    placeholder="&Star; &Star; &Star; &Star; &Star; &Star; &Star; &Star; &Star; &Star;">
+                                <div
+                                    class="absolute mt-3 mr-4 text-purple-lighter right-0 top-0 cursor-pointer toggle-visibility">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" class="fill-current"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.666748 8C1.82008 5.07333 4.66675 3 8.00008 3C11.3334 3 14.1801 5.07333 15.3334 8C14.1801 10.9267 11.3334 13 8.00008 13C4.66675 13 1.82008 10.9267 0.666748 8ZM13.8801 7.99999C12.7801 5.75332 10.5268 4.33332 8.00012 4.33332C5.47345 4.33332 3.22012 5.75332 2.12012 7.99999C3.22012 10.2467 5.47345 11.6667 8.00012 11.6667C10.5268 11.6667 12.7801 10.2467 13.8801 7.99999ZM8.00014 6.33332C8.92013 6.33332 9.6668 7.07999 9.6668 7.99999C9.6668 8.91999 8.92013 9.66665 8.00014 9.66665C7.08014 9.66665 6.33347 8.91999 6.33347 7.99999C6.33347 7.07999 7.08014 6.33332 8.00014 6.33332ZM5.00003 8C5.00003 6.34667 6.34669 5 8.00003 5C9.65336 5 11 6.34667 11 8C11 9.65333 9.65336 11 8.00003 11C6.34669 11 5.00003 9.65333 5.00003 8Z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex lg:flex-row flex-col-reverse items-center lg:justify-between">
+                            <p class="lg:mt-0 mt-8 lg:mb-0 mb-4">
+                                Already have an account?
+                                <a href="login.html" class="text-blue font-medium">Sign in</a>
+                            </p>
+
+                            <a href="onboard-bvn.html" class="btn btn-yellow focus:outline-none focus:shadow-outline"
+                                type="button">
+                                Register
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

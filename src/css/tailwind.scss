@@ -134,23 +134,23 @@ input {
     }
 
     &>div {
-        @apply w-full p-8 shadow-2xl rounded-lg;
+        @apply w-full p-8 shadow-2xl rounded-lg bg-white;
 
         @screen lg {
             @apply w-1/4;
         }
 
-        &:first-child {
-            background: white url("../img/create.svg") no-repeat 120% 130%;
-        }
+        // &:first-child {
+        //     background: white url("../img/create.svg") no-repeat 120% 125%;
+        // }
 
-        &:nth-child(2) {
-            background: white url("../img/add-payment.svg") no-repeat 120% 130%;
-        }
+        // &:nth-child(2) {
+        //     background: white url("../img/add-payment.svg") no-repeat 120% 125%;
+        // }
 
-        &:last-child {
-            background: white url("../img/send-money.svg") no-repeat 120% 130%;
-        }
+        // &:last-child {
+        //     background: white url("../img/send-money.svg") no-repeat 120% 125%;
+        // }
 
         &:not(:last-child) {
             @apply mb-10;

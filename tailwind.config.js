@@ -3,6 +3,11 @@ module.exports = {
     fontFamily: {
       'avenir': ['Avenir', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'Roboto']
     },
+    zIndex: {
+      0: 0,
+      100: 100,
+      auto: 'auto',
+    },
     extend: {
       spacing: {
         80: "80%"

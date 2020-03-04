@@ -1,16 +1,31 @@
 //main.js file
 
-// for mobile navigation
-let navigationButton = document.querySelector("button.toggle-nav");
-if (navigationButton) {
-    navigationButton.addEventListener("click", () => {
-        let navigationList = document.querySelector(".nav-list");
+const toggleList = (control, list) => {
+    console.log('okay', control)
+    let controlItem = document.querySelector(`${control}`);
+    if (controlItem) {
+        controlItem.addEventListener("click", e => {
+            e.preventDefault();
+            let listItem = document.querySelector(`${list}`);
 
-        if (navigationList) {
-            navigationList.classList.toggle("hidden");
-        }
-    });
+            if (listItem) {
+                listItem.classList.toggle("hidden");
+            }
+        });
+    }
 }
+
+// for profile list
+toggleList("div.header-auth-nav", ".header-auth-nav-list");
+// for mobile navigation
+toggleList("button.toggle-nav", ".nav-list");
+// for auth nav
+toggleList("svg.auth-nav", '.auth-nav-list');
+
+toggleList("a.send-money-nav", ".send-money-nav-list");
+toggleList("a.utility-pay-nav", ".utility-pay-nav-list");
+
+
 
 // to toggle password
 let passwordField = document.querySelector("div.toggle-visibility");
@@ -46,3 +61,4 @@ if (numberField) {
     })
 
 }
+

@@ -12,48 +12,48 @@
 
 <body class="font-avenir antialiased leading-tigh text-normal">
 
-    <section class="text-white h-full lg:h-screen" style="background: linear-gradient(170.73deg, #4E6D9E 31.92%, #073277 79.96%), #002C73;
-    opacity: 0.86;">
-        <header class="container mx-auto py-6">
-            <nav class="flex items-center justify-between flex-wrap bg-transparent lg:px-0 px-4">
-                <div class="mr-6">
-                    <a href="./index.html" title="Wave Transfer" class="flex items-center flex-shrink-0">
-                        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-                        </svg>
-                        <span class="font-semibold text-xl tracking-tight">WaveTransfer</span>
+    <header class="container sticky top-0 mx-auto py-6 z-100 bg-transparent">
+        <nav class="flex items-center justify-between flex-wrap bg-transparent lg:px-0 px-4">
+            <div class="mr-6">
+                <a href="./index.html" title="Wave Transfer" class="flex items-center flex-shrink-0">
+                    <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+                    </svg>
+                    <span class="font-semibold text-xl tracking-tight">WaveTransfer</span>
+                </a>
+            </div>
+            <div class="block lg:hidden">
+                <button
+                    class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white toggle-nav">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full block lg:flex lg:items-center lg:w-auto hidden lg:block nav-list">
+                <div class="sm:text-base text-sm lg:flex-grow">
+                    <a href="./about.html" class="nav lg:inline-block lg:mt-0">
+                        About Us
+                    </a>
+                    <a href="./index.html#contact" class="nav lg:inline-block lg:mt-0">
+                        Contact Us
+                    </a>
+                    <a href="login.html" class="nav lg:inline-block lg:mt-0">
+                        Login
                     </a>
                 </div>
-                <div class="block lg:hidden">
-                    <button
-                        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white toggle-nav">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                        </svg>
-                    </button>
+                <div>
+                    <a href="register.html" class="inline-block btn btn-yellow sm:text-base text-sm mt-4 lg:mt-0">Sign
+                        Up</a>
                 </div>
-                <div class="w-full block lg:flex lg:items-center lg:w-auto hidden lg:block nav-list">
-                    <div class="sm:text-base text-sm lg:flex-grow">
-                        <a href="./about.html" class="nav lg:inline-block lg:mt-0">
-                            About Us
-                        </a>
-                        <a href="./index.html#contact" class="nav lg:inline-block lg:mt-0">
-                            Contact Us
-                        </a>
-                        <a href="login.html" class="nav lg:inline-block lg:mt-0">
-                            Login
-                        </a>
-                    </div>
-                    <div>
-                        <a href="register.html"
-                            class="inline-block btn btn-yellow sm:text-base text-sm mt-4 lg:mt-0">Sign Up</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
+    <section class="text-white h-full lg:h-screen -mt-20 pt-20" style="background: linear-gradient(170.73deg, #4E6D9E 31.92%, #073277 79.96%), #002C73;
+    opacity: 0.86;">
 
         <div class="container mx-auto py-8 flex bg-no-repeat h-80"
             style="background-image: url(./img/home-bg.svg); background-position: 160%; background-size: 1099px 556px;">

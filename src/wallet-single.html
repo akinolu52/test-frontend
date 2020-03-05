@@ -12,9 +12,9 @@
 
 <body class="font-avenir antialiased leading-tigh text-normal">
 
-    <section class="w-full h-full flex border border-red-500" style="background-color: #E5E5E5;">
+    <section class="w-full h-full flex" style="background-color: #E5E5E5;">
         <nav
-            class="lg:w-2/12 w-6/12 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list border border-red-500">
+            class="lg:w-2/12 w-6/12 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list">
             <a href="index.html" class="flex items-center flex-shrink-0 mb-10">
                 <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
                     xmlns="http://www.w3.org/2000/svg">
@@ -63,12 +63,12 @@
                         </li>
                         <li class="mb-3 text-sm">
                             <a href="account-single.html" class="flex items-center flex-shrink-0">
-                                Bank Account (Bulk)
+                                Bank Account (Single)
                             </a>
                         </li>
                         <li class="mb-3 text-sm">
                             <a href="account-bulk.html" class="flex items-center flex-shrink-0">
-                                Bank Account (Single)
+                                Bank Account (Bulk)
                             </a>
                         </li>
                     </ul>
@@ -157,20 +157,22 @@
                     </p>
                 </div>
 
-                <div class="flex items-center">
-                    <div style="width: 30px; height: 30px;">
-                        <svg viewBox="0 0 31 31" class="fill-current bg-blue rounded-full shadow-2xl"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.5 0C6.95344 0 0 6.95344 0 15.5C0 24.0466 6.95344 31 15.5 31C24.0466 31 31 24.0466 31 15.5C31 6.95344 24.0466 0 15.5 0ZM15.5 4.52085C19.5951 4.52085 22.9271 7.85281 22.9271 11.948C22.9271 16.0431 19.5951 19.375 15.5 19.375C11.4049 19.375 8.0729 16.043 8.0729 11.9479C8.0729 7.85275 11.4049 4.52085 15.5 4.52085ZM15.5 28.4166C11.2795 28.4166 7.53687 26.3729 5.17839 23.2329C7.76229 21.9897 11.4523 20.6666 15.5 20.6666C19.548 20.6666 23.2383 21.9898 25.8217 23.2328C23.4632 26.3728 19.7206 28.4166 15.5 28.4166Z"
-                                fill="white" />
-                        </svg>
-                    </div>
-                    <div class="ml-1 header-auth-nav cursor-pointer">
-                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
-                        </svg>
+                <div>
+                    <div class="flex items-center header-auth-nav">
+                        <div style="width: 30px; height: 30px;">
+                            <svg viewBox="0 0 31 31" class="fill-current bg-blue rounded-full shadow-2xl"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.5 0C6.95344 0 0 6.95344 0 15.5C0 24.0466 6.95344 31 15.5 31C24.0466 31 31 24.0466 31 15.5C31 6.95344 24.0466 0 15.5 0ZM15.5 4.52085C19.5951 4.52085 22.9271 7.85281 22.9271 11.948C22.9271 16.0431 19.5951 19.375 15.5 19.375C11.4049 19.375 8.0729 16.043 8.0729 11.9479C8.0729 7.85275 11.4049 4.52085 15.5 4.52085ZM15.5 28.4166C11.2795 28.4166 7.53687 26.3729 5.17839 23.2329C7.76229 21.9897 11.4523 20.6666 15.5 20.6666C19.548 20.6666 23.2383 21.9898 25.8217 23.2328C23.4632 26.3728 19.7206 28.4166 15.5 28.4166Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div class="ml-1 cursor-pointer">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
+                            </svg>
+                        </div>
                     </div>
                     <ul class="header-auth-nav-list absolute p-2 z-100 w-32 bottom-0 bg-white flex flex-col justify-between rounded-md hidden"
                         style="right: 1rem; top: 3.5rem; height: 5rem; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);">
@@ -202,57 +204,106 @@
 
                 </div>
             </section>
-            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll">
+            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll"
+                style="min-height: 90vh">
 
-                <div class="flex lg:w-1/2 w-full mx-auto">
-                    <div class="w-full border-t-4 border-blue bg-white shadow-md rounded">
-                        <h2 class="section-header mb-6 text-center my-8">
-                            Send to a Wallet
-                        </h2>
-                        <form class="px-8 pt-6 pb-8 mb-4">
-                            <div class="mb-8">
-                                <label for="wallet">Wallet ID or Phone Number</label>
-                                <input type="text" placeholder="0112344565">
-                            </div>
-                            <div class="mb-8">
-                                <label for="name">Full Name</label>
-                                <input type="name" placeholder="Philip Templar" disabled readonly>
-                            </div>
-                            <div class="mb-8">
-                                <label for="amount">Amount</label>
-                                <input type="number" placeholder="500" min="100">
-                            </div>
-                            <div class="mb-8">
-                                <label for="name">Send From</label>
-                                <div class="relative">
-                                    <select
-                                        class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                        id="grid-state">
-                                        <option>Wallet(₦350,0000)</option>
-                                        <option>My Virtual Card 1(₦40,0000)</option>
-                                        <option>My Zenith bank account</option>
-                                        <option>My Zenith bank card</option>
-                                    </select>
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
+                <div>
+                    <ul class="flex">
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Add Account</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">View List</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">See History</a></li>
+                    </ul>
+
+                    <div class="flex lg:mt-16 mt-4">
+                        <div class="lg:w-1/2 w-full mx-auto border-t-4 border-blue rounded"
+                            style="box-shadow: 0px 0px 44px rgba(69, 83, 199, 0.1);">
+                            <h2 class="section-header mb-6 text-center my-8">
+                                Send to a Wallet
+                            </h2>
+                            <form class="lg:px-8 px-4 lg:pt-6 pt-3 lg:pb-8 pb-4 mb-4">
+                                <div class="mb-8">
+                                    <label for="wallet">Wallet ID or Phone Number</label>
+                                    <input type="text" placeholder="0112344565">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="name">Full Name</label>
+                                    <input type="name" placeholder="Philip Templar" disabled readonly
+                                        class="bg-gray-300">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" placeholder="500" min="100">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="name">Send From</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            id="grid-state">
+                                            <option>Wallet(₦350,0000)</option>
+                                            <option>My Virtual Card 1(₦40,0000)</option>
+                                            <option>My Zenith bank account</option>
+                                            <option>My Zenith bank card</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="mb-10">
-                                <label for="message">Narration <em class="font-bold">(optional)</em></label>
-                                <textarea cols="20" rows="2" placeholder="Enter your message here"></textarea>
-                            </div>
-                            <div class="flex items-center lg:justify-end">
-                                <button class="btn btn-yellow " type="button">
-                                    Send for Free
-                                </button>
-                            </div>
-                        </form>
+                                <div class="mb-10">
+                                    <label for="message">Narration <em class="font-bold">(optional)</em></label>
+                                    <textarea cols="20" rows="2" placeholder="Enter your message here"></textarea>
+                                </div>
+                                <div class="mb-10">
+                                    <label for="message">Frequency</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            id="grid-state">
+                                            <option>Weekly</option>
+                                            <option>Bi-weekly</option>
+                                            <option>Monthly</option>
+                                            <option>Quarterly</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-10">
+                                    <label for="message">Start Date - End Date</label>
+                                    <input type="datetime-local">
+                                </div>
+                                <div class="flex items-center lg:justify-between">
+
+                                    <label for="unchecked" class="automate inline-flex items-center cursor-pointer">
+                                        <span class="text-sm">Automate Transfer</span>
+                                        <span class="ml-3 relative">
+                                            <span class="block w-10 h-6 bg-gray-400 rounded-full shadow-inner"></span>
+                                            <span
+                                                class="check absolute block w-4 h-4 mt-1 ml-1 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out bg-white">
+                                                <input id="unchecked" type="checkbox"
+                                                    class="absolute opacity-0 w-0 h-0" />
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <button class="btn btn-yellow " type="button">
+                                        Send for Free
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

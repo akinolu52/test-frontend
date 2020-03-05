@@ -1,6 +1,6 @@
 //main.js file
 
-const toggleList = (control, list) => {
+const toggleList = (control, list, toggle="hidden" ) => {
     console.log('okay', control)
     let controlItem = document.querySelector(`${control}`);
     if (controlItem) {
@@ -9,7 +9,7 @@ const toggleList = (control, list) => {
             let listItem = document.querySelector(`${list}`);
 
             if (listItem) {
-                listItem.classList.toggle("hidden");
+                listItem.classList.toggle(`${toggle}`);
             }
         });
     }
@@ -24,8 +24,9 @@ toggleList("svg.auth-nav", '.auth-nav-list');
 
 toggleList("a.send-money-nav", ".send-money-nav-list");
 toggleList("a.utility-pay-nav", ".utility-pay-nav-list");
-
-
+toggleList("label.automate", "span.check", "bg-blue");
+toggleList("label.automate", "span.check", "transform");
+toggleList("label.automate", "span.check", "translate-x-full");
 
 // to toggle password
 let passwordField = document.querySelector("div.toggle-visibility");

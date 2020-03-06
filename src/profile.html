@@ -144,8 +144,7 @@
                 </li>
             </ul>
         </nav>
-        <main class="lg:w-10/12 w-full h-screen lg:m-1 rounded-md text-blue"
-            style="box-shadow: 0px 4px 34px rgba(69, 83, 199, 0.08);">
+        <main class="lg:w-10/12 w-full h-screen lg:m-1 rounded-md text-blue" style="box-shadow: 0px 4px 34px rgba(69, 83, 199, 0.08);">
             <section class="flex justify-between items-center bg-white lg:px-8 px-4 lg:py-6 py-3 mb-1">
                 <div class="flex items-center">
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -210,52 +209,46 @@
 
                 <div>
                     <ul class="flex">
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Transactions</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Personal Information</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Notifications</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Referral</a></li>
                     </ul>
 
                     <div class="flex lg:mt-10 mt-4">
-                        <table class="table-auto w-full border overflow-hidden rounded-md p-4"
-                            style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
-                            <thead>
-                                <tr class="text-gray-500 uppercase text-sm text-left pb-6 pt-10">
-                                    <th class="px-4 pb-4 pt-6">DATE</th>
-                                    <th class="px-4 pb-4 pt-6">CATEGORY</th>
-                                    <th class="px-4 pb-4 pt-6">NARRATION</th>
-                                    <th class="px-4 pb-4 pt-6">AMOUNT</th>
-                                    <th class="px-4 pb-4 pt-6">BALANCE</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-sm">
-                                <tr class="bg-gray-100 p-2">
-                                    <td class="px-4 py-4">10 Oct 2019</td>
-                                    <td class="px-4 py-4">Debit</td>
-                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
-                                    <td class="px-4 py-4">#3,500</td>
-                                    <td class="px-4 py-4">#28,500</td>
-                                </tr>
-                                <tr class="p-2">
-                                    <td class="px-4 py-4">10 Oct 2019</td>
-                                    <td class="px-4 py-4">Debit</td>
-                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
-                                    <td class="px-4 py-4">#3,500</td>
-                                    <td class="px-4 py-4">#28,500</td>
-                                </tr>
-                                <tr class="bg-gray-100">
-                                    <td class="px-4 py-4">10 Oct 2019</td>
-                                    <td class="px-4 py-4">Debit</td>
-                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
-                                    <td class="px-4 py-4">#3,500</td>
-                                    <td class="px-4 py-4">#28,500</td>
-                                </tr>
-                                <tr class="p-2">
-                                    <td class="px-4 py-4">10 Oct 2019</td>
-                                    <td class="px-4 py-4">Debit</td>
-                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
-                                    <td class="px-4 py-4">#3,500</td>
-                                    <td class="px-4 py-4">#28,500</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="w-full lg:w-1/2">
+                            <form class="lg:px-0 mb-4">
+                                <div class="flex flex-wrap -mx-3 mb-8">
+                                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" placeholder="Philip">
+                                    </div>
+                                    <div class="w-full md:w-1/2 px-3">
+                                        <label for="last-name">Last Name</label>
+                                        <input id="last-name" type="text" placeholder="Templar">
+                                    </div>
+                                </div>
+                                <div class="mb-8">
+                                    <label for="email">Phone Number</label>
+                                    <input type="tel" placeholder="+2348123456788">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="email">Email</label>
+                                    <input type="email" placeholder="You@email.com">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="email">Password</label>
+                                    <p>
+                                        <button class="btn btn-white mt-1" type="button"
+                                            style="box-shadow: 0px 0px 4px #002C73;">Change Password</button>
+                                    </p>
+                                </div>
+                                <div class="flex items-center lg:justify-end">
+                                    <button class="btn btn-yellow " type="button">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 

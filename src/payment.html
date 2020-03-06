@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WaveTransfer</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body class="font-avenir antialiased leading-tigh text-normal">
+
+    <section class="w-full h-full flex" style="background-color: #E5E5E5;">
+        <nav
+            class="lg:w-2/12 w-6/12 sticky top-0 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list">
+            <a href="index.html" class="flex items-center flex-shrink-0 mb-10">
+                <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+                </svg>
+                WaveTransfer
+            </a>
+            <ul>
+                <li class="lg:mb-6 mb-4">
+                    <a href="dashboard.html" class="flex items-center flex-shrink-0">
+                        <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 lg:mr-4 mr-2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="lg:mb-6 mb-4">
+                    <a href="#" class="flex items-center flex-shrink-0 send-money-nav">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                            </path>
+                        </svg>
+                        Send Money
+                        <div class="ml-1 cursor-pointer">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <ul class="lg:ml-12 ml-3 flex flex-col justify-between send-money-nav-list hidden">
+                        <li class="mt-2 mb-3 text-sm">
+                            <a href="wallet-single.html" class="flex items-center flex-shrink-0">
+                                Wallet (Single)
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="wallet-bulk.html" class="flex items-center flex-shrink-0">
+                                Wallet (Bulk)
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="account-single.html" class="flex items-center flex-shrink-0">
+                                Bank Account (Single)
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="account-bulk.html" class="flex items-center flex-shrink-0">
+                                Bank Account (Bulk)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lg:mb-6 mb-4">
+                    <a href="payment.html" class="flex items-center flex-shrink-0">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                            </path>
+                        </svg>
+                        Payment
+                    </a>
+                </li>
+                <li class="lg:mb-6 mb-4">
+                    <a href="history.html" class="flex items-center flex-shrink-0">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                            </path>
+                        </svg>
+                        History
+                    </a>
+                </li>
+                <li class="lg:mb-6 mb-4">
+                    <a href="#" class="flex items-center flex-shrink-0 utility-pay-nav">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                            </path>
+                        </svg>
+                        Utility Payments
+                        <div class="ml-1 cursor-pointer">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <ul class="lg:ml-12 ml-3 flex flex-col justify-between utility-pay-nav-list hidden">
+                        <li class="mt-2 mb-3 text-sm">
+                            <a href="buy-airtime.html" class="flex items-center flex-shrink-0">
+                                Buy Airtime
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="internet-subscription.html" class="flex items-center flex-shrink-0">
+                                Internet Subscription
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="electricity.html" class="flex items-center flex-shrink-0">
+                                Electricity Bills
+                            </a>
+                        </li>
+                        <li class="mb-3 text-sm">
+                            <a href="dstv.html" class="flex items-center flex-shrink-0">
+                                DSTV Subscription
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="lg:mb-6 mb-4">
+                    <a href="budget.html" class="flex items-center flex-shrink-0">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
+                            </path>
+                        </svg>
+                        Budgets
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="lg:w-10/12 w-full h-screen lg:m-1 rounded-md text-blue">
+            <section class="flex justify-between items-center bg-white lg:px-8 px-4 lg:py-6 py-3 mb-1">
+                <div class="flex items-center">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6 mr-4 block lg:hidden auth-nav">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7"></path>
+                    </svg>
+                    <p>
+                        Hello, Philip 👋🏼
+                    </p>
+                </div>
+
+                <div>
+                    <div class="flex items-center header-auth-nav">
+                        <div style="width: 30px; height: 30px;">
+                            <svg viewBox="0 0 31 31" class="fill-current bg-blue rounded-full shadow-2xl"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.5 0C6.95344 0 0 6.95344 0 15.5C0 24.0466 6.95344 31 15.5 31C24.0466 31 31 24.0466 31 15.5C31 6.95344 24.0466 0 15.5 0ZM15.5 4.52085C19.5951 4.52085 22.9271 7.85281 22.9271 11.948C22.9271 16.0431 19.5951 19.375 15.5 19.375C11.4049 19.375 8.0729 16.043 8.0729 11.9479C8.0729 7.85275 11.4049 4.52085 15.5 4.52085ZM15.5 28.4166C11.2795 28.4166 7.53687 26.3729 5.17839 23.2329C7.76229 21.9897 11.4523 20.6666 15.5 20.6666C19.548 20.6666 23.2383 21.9898 25.8217 23.2328C23.4632 26.3728 19.7206 28.4166 15.5 28.4166Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <div class="ml-1 cursor-pointer">
+                            <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
+                            </svg>
+                        </div>
+                    </div>
+                    <ul class="header-auth-nav-list absolute p-2 z-100 w-32 bottom-0 bg-white flex flex-col justify-between rounded-md hidden"
+                        style="right: 1rem; top: 3.5rem; height: 5rem; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);">
+                        <li>
+                            <a href="profile.html" class="flex items-center flex-shrink-0 text-sm">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center flex-shrink-0 text-sm">
+                                <svg class="h-4 w-4 ml-1 mr-3" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.33366 0H6.66699V8.33333H8.33366V0Z" fill="#9EABC5" />
+                                    <path
+                                        d="M12.3583 1.80835L11.175 2.99168C12.4917 4.05002 13.3333 5.67502 13.3333 7.50002C13.3333 10.725 10.725 13.3334 7.5 13.3334C4.275 13.3334 1.66667 10.725 1.66667 7.50002C1.66667 5.67502 2.50833 4.05002 3.81667 2.98335L2.64167 1.80835C1.025 3.18335 0 5.21668 0 7.50002C0 11.6417 3.35833 15 7.5 15C11.6417 15 15 11.6417 15 7.50002C15 5.21668 13.975 3.18335 12.3583 1.80835Z"
+                                        fill="#9EABC5" />
+                                </svg>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll"
+                style="min-height: 90vh">
+
+                <div>
+                    <ul class="flex">
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Banks</a></li>
+                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Cards</a></li>
+                    </ul>
+
+                    <div class="grid lg:grid-cols-3 gap-6 lg:mt-10 mt-4">
+                       
+                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                            style="border-color: #EEEBEB">
+                            <div class="mx-auto mb-1">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <p class="font-medium">Add Bank Account</p>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                            style="border-color: #EEEBEB">
+                            <div class="mx-auto mb-1">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+
+                            <p class="font-medium">Add Card</p>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                            style="border-color: #EEEBEB">
+                            <div class="mx-auto mb-1">
+                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+
+                            <p class="font-medium">Create Virtual Card</p>
+                        </div>
+
+                        <div class="flex flex-col justify-evenly h-40 flex-1 text-white px-4 rounded bg-blue-dark">
+                            <div class="flex justify-between items-center">
+                                <p>ACCESS BANK</p>
+                                <p>
+                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M15.3999 27.0332L17.5332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
+                                                fill="#3C58BF" />
+                                            <path d="M15.3999 27.0332L18.1332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
+                                                fill="white" />
+                                            <path
+                                                d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.0665 16.3 22.0665 18.7C22.0665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
+                                                fill="#3C58BF" />
+                                            <path
+                                                d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.6665 16.3 22.6665 18.7C22.6665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
+                                                fill="white" />
+                                            <path
+                                                d="M36.6 15.0332C35.8 15.0332 35.2 15.0999 34.8667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H36.6ZM35.0667 23.0332C35.2667 22.4332 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
+                                                fill="#3C58BF" />
+                                            <path
+                                                d="M37.4 15.0332C36.6 15.0332 36 15.0999 35.6667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H37.4ZM35.0667 23.0332C35.3334 22.3665 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
+                                                fill="white" />
+                                            <path
+                                                d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H12.6666L9.2666 23.4334Z"
+                                                fill="#3C58BF" />
+                                            <path
+                                                d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H13.3333L9.2666 23.4334Z"
+                                                fill="white" />
+                                            <path
+                                                d="M0 15.0332L0.6 15.1665C4.86667 16.1665 7.8 18.6999 8.93333 21.6999L7.73333 16.0332C7.53333 15.2332 6.93333 15.0332 6.2 15.0332H0Z"
+                                                fill="#FFBC00" />
+                                            <path
+                                                d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L7.8 16.8999C7.6 16.0999 6.93333 15.6332 6.2 15.6332L0 15.0332Z"
+                                                fill="#F7981D" />
+                                            <path
+                                                d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L8.13333 19.0332C7.93333 18.2332 7.66667 17.4332 6.73333 17.0999L0 15.0332Z"
+                                                fill="#ED7C00" />
+                                            <path
+                                                d="M12.6002 23.0334L10.3335 20.7667L9.26683 23.3L9.00016 21.6334C8.40016 19.6334 6.46683 17.4334 4.3335 16.3667L7.3335 27.0334H10.9335L12.6002 23.0334Z"
+                                                fill="white" />
+                                            <path d="M18.8004 27.0334L15.9337 24.1001L15.4004 27.0334H18.8004Z"
+                                                fill="white" />
+                                            <path
+                                                d="M26.467 22.8999C26.7337 23.1666 26.867 23.3666 26.8003 23.6332C26.8003 24.4332 25.7337 24.8332 24.8003 24.8332C23.467 24.8332 22.7337 24.6332 21.6003 24.1666L21.1337 23.9666L20.667 26.6999C21.467 27.0332 22.9337 27.3666 24.467 27.3666C26.6003 27.3666 28.3337 26.7666 29.3337 25.6999L26.467 22.8999Z"
+                                                fill="white" />
+                                            <path
+                                                d="M30.3335 27.0331H33.4668L34.1335 25.0331H38.4002L38.8002 27.0331H42.0002L40.8668 22.1665L36.8668 18.2998L37.0668 19.3665C37.0668 19.3665 37.7335 22.3665 37.8668 23.0331H35.0668C35.3335 22.3665 36.4002 19.4998 36.4002 19.4998C36.4002 19.4998 36.6668 18.7665 36.8668 18.2998"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="42" height="42" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-bold">0000 0000 0000 0000</p>
+                            </div>
+                            <div>
+                                <p class="uppercase">PHILIP TEMPLAR</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between h-40 flex-1 text-white px-4 py-6 rounded bg-blue-dark">
+                            <div class="flex justify-between items-center">
+                                <p>United Bank of Africa</p>
+                                <p class="font-bold">1234567890</p>
+                            </div>
+                            <div>
+                                <p class="font-bold uppercase">PHILIP, TEMPLAR</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </section>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

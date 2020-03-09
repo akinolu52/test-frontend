@@ -3,19 +3,31 @@
 $primary-color: #162380;
 $alt-color: #FFD005;
 
-.auth-bg{
+.auth-bg {
     background-color: #E5E5E5;
+
     form {
         border: 0.2px solid #4553C780;
     }
 }
+
 ul.tabs {
     li {
         @apply mr-10 p-px border-b-2 border-white cursor-pointer;
+
         &.active {
             @apply border-black;
         }
     }
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
 }
 
 // h2 {

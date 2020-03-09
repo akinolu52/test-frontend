@@ -58,7 +58,7 @@ gulp.task('build-html', function () {
     gulp
         .src(options.paths.src.base + '/**/*.html')
         .pipe(newer('src/dist/'))
-        .pipe(htmlclean())
+        // .pipe(htmlclean())
         .pipe(gulp.dest('src/dist/'));
 });
 

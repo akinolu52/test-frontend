@@ -208,125 +208,137 @@
                 style="min-height: 90vh">
 
                 <div>
-                    <ul class="flex">
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Banks</a></li>
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Cards</a></li>
+
+                    <ul class="flex tabs">
+                        <li class="active" id="tab-bank">Banks</li>
+                        <li id="tab-card">Cards</li>
                     </ul>
 
-                    <div class="grid lg:grid-cols-3 gap-6 lg:mt-10 mt-4">
-                       
-                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
-                            style="border-color: #EEEBEB">
-                            <div class="mx-auto mb-1">
-                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 4v16m8-8H4"></path>
-                                </svg>
-                            </div>
-                            <p class="font-medium">Add Bank Account</p>
-                        </div>
+                    <div class="lg:mt-10 mt-4 tabs-list">
 
-                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
-                            style="border-color: #EEEBEB">
-                            <div class="mx-auto mb-1">
-                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 4v16m8-8H4"></path>
-                                </svg>
-                            </div>
+                        <div class="grid lg:grid-cols-3 gap-6 tab-bank">
 
-                            <p class="font-medium">Add Card</p>
-                        </div>
-
-                        <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
-                            style="border-color: #EEEBEB">
-                            <div class="mx-auto mb-1">
-                                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 4v16m8-8H4"></path>
-                                </svg>
-                            </div>
-
-                            <p class="font-medium">Create Virtual Card</p>
-                        </div>
-
-                        <div class="flex flex-col justify-evenly h-40 flex-1 text-white px-4 rounded bg-blue-dark">
-                            <div class="flex justify-between items-center">
-                                <p>ACCESS BANK</p>
-                                <p>
-                                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0)">
-                                            <path d="M15.3999 27.0332L17.5332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
-                                                fill="#3C58BF" />
-                                            <path d="M15.3999 27.0332L18.1332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
-                                                fill="white" />
-                                            <path
-                                                d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.0665 16.3 22.0665 18.7C22.0665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
-                                                fill="#3C58BF" />
-                                            <path
-                                                d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.6665 16.3 22.6665 18.7C22.6665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
-                                                fill="white" />
-                                            <path
-                                                d="M36.6 15.0332C35.8 15.0332 35.2 15.0999 34.8667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H36.6ZM35.0667 23.0332C35.2667 22.4332 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
-                                                fill="#3C58BF" />
-                                            <path
-                                                d="M37.4 15.0332C36.6 15.0332 36 15.0999 35.6667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H37.4ZM35.0667 23.0332C35.3334 22.3665 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
-                                                fill="white" />
-                                            <path
-                                                d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H12.6666L9.2666 23.4334Z"
-                                                fill="#3C58BF" />
-                                            <path
-                                                d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H13.3333L9.2666 23.4334Z"
-                                                fill="white" />
-                                            <path
-                                                d="M0 15.0332L0.6 15.1665C4.86667 16.1665 7.8 18.6999 8.93333 21.6999L7.73333 16.0332C7.53333 15.2332 6.93333 15.0332 6.2 15.0332H0Z"
-                                                fill="#FFBC00" />
-                                            <path
-                                                d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L7.8 16.8999C7.6 16.0999 6.93333 15.6332 6.2 15.6332L0 15.0332Z"
-                                                fill="#F7981D" />
-                                            <path
-                                                d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L8.13333 19.0332C7.93333 18.2332 7.66667 17.4332 6.73333 17.0999L0 15.0332Z"
-                                                fill="#ED7C00" />
-                                            <path
-                                                d="M12.6002 23.0334L10.3335 20.7667L9.26683 23.3L9.00016 21.6334C8.40016 19.6334 6.46683 17.4334 4.3335 16.3667L7.3335 27.0334H10.9335L12.6002 23.0334Z"
-                                                fill="white" />
-                                            <path d="M18.8004 27.0334L15.9337 24.1001L15.4004 27.0334H18.8004Z"
-                                                fill="white" />
-                                            <path
-                                                d="M26.467 22.8999C26.7337 23.1666 26.867 23.3666 26.8003 23.6332C26.8003 24.4332 25.7337 24.8332 24.8003 24.8332C23.467 24.8332 22.7337 24.6332 21.6003 24.1666L21.1337 23.9666L20.667 26.6999C21.467 27.0332 22.9337 27.3666 24.467 27.3666C26.6003 27.3666 28.3337 26.7666 29.3337 25.6999L26.467 22.8999Z"
-                                                fill="white" />
-                                            <path
-                                                d="M30.3335 27.0331H33.4668L34.1335 25.0331H38.4002L38.8002 27.0331H42.0002L40.8668 22.1665L36.8668 18.2998L37.0668 19.3665C37.0668 19.3665 37.7335 22.3665 37.8668 23.0331H35.0668C35.3335 22.3665 36.4002 19.4998 36.4002 19.4998C36.4002 19.4998 36.6668 18.7665 36.8668 18.2998"
-                                                fill="white" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0">
-                                                <rect width="42" height="42" fill="white" />
-                                            </clipPath>
-                                        </defs>
+                            <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                                style="border-color: #EEEBEB">
+                                <div class="mx-auto mb-1">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
                                     </svg>
-                                </p>
+                                </div>
+                                <p class="font-medium">Add Bank Account</p>
                             </div>
-                            <div>
-                                <p class="font-bold">0000 0000 0000 0000</p>
+
+                            <div
+                                class="flex flex-col justify-between h-40 flex-1 text-white px-4 py-6 rounded bg-blue-dark">
+                                <div class="flex justify-between items-center">
+                                    <p>United Bank of Africa</p>
+                                    <p class="font-bold">1234567890</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold uppercase">PHILIP, TEMPLAR</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="uppercase">PHILIP TEMPLAR</p>
-                            </div>
+
                         </div>
 
-                        <div class="flex flex-col justify-between h-40 flex-1 text-white px-4 py-6 rounded bg-blue-dark">
-                            <div class="flex justify-between items-center">
-                                <p>United Bank of Africa</p>
-                                <p class="font-bold">1234567890</p>
-                            </div>
-                            <div>
-                                <p class="font-bold uppercase">PHILIP, TEMPLAR</p>
-                            </div>
-                        </div>
+                        <div class="grid lg:grid-cols-3 gap-6 tab-card hidden">
 
+                            <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                                style="border-color: #EEEBEB">
+                                <div class="mx-auto mb-1">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </div>
+
+                                <p class="font-medium">Add Card</p>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center h-40 flex-1 text-center rounded border"
+                                style="border-color: #EEEBEB">
+                                <div class="mx-auto mb-1">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </div>
+
+                                <p class="font-medium">Create Virtual Card</p>
+                            </div>
+
+                            <div class="flex flex-col justify-evenly h-40 flex-1 text-white px-4 rounded bg-blue-dark">
+                                <div class="flex justify-between items-center">
+                                    <p>ACCESS BANK</p>
+                                    <p>
+                                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path
+                                                    d="M15.3999 27.0332L17.5332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
+                                                    fill="#3C58BF" />
+                                                <path
+                                                    d="M15.3999 27.0332L18.1332 15.0332H20.8666L18.7999 27.0332H15.3999Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.0665 16.3 22.0665 18.7C22.0665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
+                                                    fill="#3C58BF" />
+                                                <path
+                                                    d="M30.8665 15.1666C30.1998 14.9 29.1332 14.6333 27.7998 14.6333C24.4665 14.6333 22.6665 16.3 22.6665 18.7C22.6665 20.5 23.7332 21.4333 25.0665 22.0333C26.3998 22.6333 26.7998 23.0333 26.7998 23.5666C26.7998 24.3666 25.7332 24.7666 24.7998 24.7666C23.4665 24.7666 22.7332 24.5666 21.5998 24.1L21.1332 23.9L20.6665 26.6333C21.4665 26.9666 22.9332 27.3 24.4665 27.3C27.9998 27.3 30.3332 25.6333 30.3332 23.1C30.3332 21.7 29.4665 20.6333 27.4665 19.7666C26.2665 19.1666 25.5332 18.8333 25.5332 18.2333C25.5332 17.7 26.1332 17.1666 27.4665 17.1666C28.5998 17.1666 29.3998 17.3666 29.9998 17.6333L30.3332 17.7666L30.8665 15.1666Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M36.6 15.0332C35.8 15.0332 35.2 15.0999 34.8667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H36.6ZM35.0667 23.0332C35.2667 22.4332 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
+                                                    fill="#3C58BF" />
+                                                <path
+                                                    d="M37.4 15.0332C36.6 15.0332 36 15.0999 35.6667 15.8999L29.8667 27.0332H33.4667L34.1334 25.0332H38.4L38.8 27.0332H42L39.2 15.0332H37.4ZM35.0667 23.0332C35.3334 22.3665 36.4 19.4999 36.4 19.4999C36.4 19.4999 36.6667 18.7665 36.8667 18.2999L37.0667 19.4332C37.0667 19.4332 37.7334 22.4332 37.8667 23.0999H35.0667V23.0332Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H12.6666L9.2666 23.4334Z"
+                                                    fill="#3C58BF" />
+                                                <path
+                                                    d="M9.2666 23.4334L8.93327 21.7001C8.33327 19.7001 6.39994 17.5001 4.2666 16.4334L7.2666 27.1001H10.8666L16.2666 15.1001H13.3333L9.2666 23.4334Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M0 15.0332L0.6 15.1665C4.86667 16.1665 7.8 18.6999 8.93333 21.6999L7.73333 16.0332C7.53333 15.2332 6.93333 15.0332 6.2 15.0332H0Z"
+                                                    fill="#FFBC00" />
+                                                <path
+                                                    d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L7.8 16.8999C7.6 16.0999 6.93333 15.6332 6.2 15.6332L0 15.0332Z"
+                                                    fill="#F7981D" />
+                                                <path
+                                                    d="M0 15.0332C4.26667 16.0332 7.8 18.6332 8.93333 21.6332L8.13333 19.0332C7.93333 18.2332 7.66667 17.4332 6.73333 17.0999L0 15.0332Z"
+                                                    fill="#ED7C00" />
+                                                <path
+                                                    d="M12.6002 23.0334L10.3335 20.7667L9.26683 23.3L9.00016 21.6334C8.40016 19.6334 6.46683 17.4334 4.3335 16.3667L7.3335 27.0334H10.9335L12.6002 23.0334Z"
+                                                    fill="white" />
+                                                <path d="M18.8004 27.0334L15.9337 24.1001L15.4004 27.0334H18.8004Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M26.467 22.8999C26.7337 23.1666 26.867 23.3666 26.8003 23.6332C26.8003 24.4332 25.7337 24.8332 24.8003 24.8332C23.467 24.8332 22.7337 24.6332 21.6003 24.1666L21.1337 23.9666L20.667 26.6999C21.467 27.0332 22.9337 27.3666 24.467 27.3666C26.6003 27.3666 28.3337 26.7666 29.3337 25.6999L26.467 22.8999Z"
+                                                    fill="white" />
+                                                <path
+                                                    d="M30.3335 27.0331H33.4668L34.1335 25.0331H38.4002L38.8002 27.0331H42.0002L40.8668 22.1665L36.8668 18.2998L37.0668 19.3665C37.0668 19.3665 37.7335 22.3665 37.8668 23.0331H35.0668C35.3335 22.3665 36.4002 19.4998 36.4002 19.4998C36.4002 19.4998 36.6668 18.7665 36.8668 18.2998"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="42" height="42" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-bold">0000 0000 0000 0000</p>
+                                </div>
+                                <div>
+                                    <p class="uppercase">PHILIP TEMPLAR</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
 
             </section>

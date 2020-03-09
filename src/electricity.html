@@ -205,105 +205,198 @@
 
                 </div>
             </section>
-            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll" style="min-height: 90vh">
+            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll"
+                style="min-height: 90vh">
+                <div>
+                    <ul class="flex tabs">
+                        <li class="active" id="tab-buy">Buy Electricity</li>
+                        <li id="tab-list">View List</li>
+                        <li id="tab-history">See History</li>
+                    </ul>
+                    <div class="flex lg:mt-16 mt-4 tabs-list">
+                        <div class="lg:w-1/2 w-full mx-auto border-t-4 border-blue rounded tab-buy"
+                            style="box-shadow: 0px 0px 44px rgba(69, 83, 199, 0.1);">
+                            <h2 class="section-header mb-6 text-center my-8">
+                                Electricity Bills
+                            </h2>
+                            <form class="lg:px-8 px-4 lg:pt-6 pt-3 lg:pb-8 pb-4 mb-4">
+                                <div class="mb-8">
+                                    <label for="wallet">Meter Number</label>
+                                    <input type="tel" class="number" placeholder="09112058382" autofocus>
+                                </div>
+                                <div class="mb-8">
+                                    <label for="name">Meter Type</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            id="grid-state">
+                                            <option>Glo</option>
+                                            <option>MTN</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-8">
+                                    <label for="amount">Amount</label>
+                                    <input type="text" class="number" placeholder="500" min="100">
+                                </div>
+                                <div class="mb-8">
+                                    <label for="name">Send From</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            id="grid-state">
+                                            <option>Wallet(₦350,0000)</option>
+                                            <option>My Virtual Card 1(₦40,0000)</option>
+                                            <option>My Zenith bank account</option>
+                                            <option>My Zenith bank card</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-10">
+                                    <label for="message">Frequency</label>
+                                    <div class="relative">
+                                        <select
+                                            class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                            id="grid-state">
+                                            <option>Weekly</option>
+                                            <option>Bi-weekly</option>
+                                            <option>Monthly</option>
+                                            <option>Quarterly</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20">
+                                                <path
+                                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-10">
+                                    <label for="message">Start Date - End Date</label>
+                                    <input type="datetime-local">
+                                </div>
+                                <div class="flex items-center lg:justify-between">
 
-                <div class="flex lg:w-1/2 w-full mx-auto">
-                    <div class="w-full border-t-4 border-blue rounded" style="box-shadow: 0px 0px 44px rgba(69, 83, 199, 0.1);">
-                        <h2 class="section-header mb-6 text-center my-8">
-                            Electricity Bills
-                        </h2>
-                        <form class="lg:px-8 px-4 lg:pt-6 pt-3 lg:pb-8 pb-4 mb-4">
-                            <div class="mb-8">
-                                <label for="wallet">Meter Number</label>
-                                <input type="tel" placeholder="09112058382">
-                            </div>
-                            <div class="mb-8">
-                                <label for="name">Meter Type</label>
-                                <div class="relative">
-                                    <select
-                                        class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                        id="grid-state">
-                                        <option>Glo</option>
-                                        <option>MTN</option>
-                                    </select>
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-8">
-                                <label for="amount">Amount</label>
-                                <input type="number" placeholder="500" min="100">
-                            </div>
-                            <div class="mb-8">
-                                <label for="name">Send From</label>
-                                <div class="relative">
-                                    <select
-                                        class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                        id="grid-state">
-                                        <option>Wallet(₦350,0000)</option>
-                                        <option>My Virtual Card 1(₦40,0000)</option>
-                                        <option>My Zenith bank account</option>
-                                        <option>My Zenith bank card</option>
-                                    </select>
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-10">
-                                <label for="message">Frequency</label>
-                                <div class="relative">
-                                    <select
-                                        class="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                        id="grid-state">
-                                        <option>Weekly</option>
-                                        <option>Bi-weekly</option>
-                                        <option>Monthly</option>
-                                        <option>Quarterly</option>
-                                    </select>
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-10">
-                                <label for="message">Start Date - End Date</label>
-                                <input type="datetime-local">
-                            </div>
-                            <div class="flex items-center lg:justify-between">
-
-                                <label for="unchecked" class="automate inline-flex items-center cursor-pointer">
-                                    <span class="text-sm">Automate Transfer</span>
-                                    <span class="ml-3 relative">
-                                        <span class="block w-10 h-6 bg-gray-400 rounded-full shadow-inner"></span>
-                                        <span
-                                            class="check absolute block w-4 h-4 mt-1 ml-1 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out bg-white">
-                                            <input id="unchecked" type="checkbox" class="absolute opacity-0 w-0 h-0" />
+                                    <label for="unchecked" class="automate inline-flex items-center cursor-pointer">
+                                        <span class="text-sm">Automate Transfer</span>
+                                        <span class="ml-3 relative">
+                                            <span class="block w-10 h-6 bg-gray-400 rounded-full shadow-inner"></span>
+                                            <span
+                                                class="check absolute block w-4 h-4 mt-1 ml-1 rounded-full shadow inset-y-0 left-0 focus-within:shadow-outline transition-transform duration-300 ease-in-out bg-white">
+                                                <input id="unchecked" type="checkbox"
+                                                    class="absolute opacity-0 w-0 h-0" />
+                                            </span>
                                         </span>
-                                    </span>
-                                </label>
+                                    </label>
 
-                                <button class="btn btn-yellow " type="button">
-                                    Pay
-                                </button>
-                            </div>
-                        </form>
+                                    <button class="btn btn-yellow " type="button">
+                                        Pay
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <table class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-list hidden"
+                            style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
+                            <thead>
+                                <tr class="text-gray-500 uppercase text-left pb-6 pt-10">
+                                    <th class="px-4 pb-4 pt-6">SN</th>
+                                    <th class="px-4 pb-4 pt-6">CATEGORY</th>
+                                    <th class="px-4 pb-4 pt-6">NARRATION</th>
+                                    <th class="px-4 pb-4 pt-6">AMOUNT</th>
+                                    <th class="px-4 pb-4 pt-6">BALANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr class="bg-gray-100 p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="bg-gray-100">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-history hidden"
+                            style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
+                            <thead>
+                                <tr class="text-gray-500 uppercase text-left pb-6 pt-10">
+                                    <th class="px-4 pb-4 pt-6">DATE</th>
+                                    <th class="px-4 pb-4 pt-6">CATEGORY</th>
+                                    <th class="px-4 pb-4 pt-6">NARRATION</th>
+                                    <th class="px-4 pb-4 pt-6">AMOUNT</th>
+                                    <th class="px-4 pb-4 pt-6">BALANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr class="bg-gray-100 p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="bg-gray-100">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

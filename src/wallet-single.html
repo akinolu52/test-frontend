@@ -222,7 +222,7 @@
                             <form class="lg:px-8 px-4 lg:pt-6 pt-3 lg:pb-8 pb-4 mb-4">
                                 <div class="mb-8">
                                     <label for="wallet">Wallet ID or Phone Number</label>
-                                    <input type="text" placeholder="0112344565">
+                                    <input type="text" class="number" placeholder="0112344565" autofocus>
                                 </div>
                                 <div class="mb-8">
                                     <label for="name">Full Name</label>
@@ -231,7 +231,7 @@
                                 </div>
                                 <div class="mb-8">
                                     <label for="amount">Amount</label>
-                                    <input type="number" placeholder="500" min="100">
+                                    <input type="text" class="number" placeholder="500" min="100">
                                 </div>
                                 <div class="mb-8">
                                     <label for="name">Send From</label>
@@ -345,7 +345,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-history hidden"
+                        <table
+                            class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-history hidden"
                             style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
                             <thead>
                                 <tr class="text-gray-500 uppercase text-left pb-6 pt-10">

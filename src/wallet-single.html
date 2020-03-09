@@ -13,8 +13,7 @@
 <body class="font-avenir antialiased leading-tigh text-normal">
 
     <section class="w-full h-full flex" style="background-color: #E5E5E5;">
-        <nav
-            class="lg:w-2/12 w-6/12 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list">
+        <nav class="lg:w-2/12 w-6/12 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list">
             <a href="index.html" class="flex items-center flex-shrink-0 mb-10">
                 <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
                     xmlns="http://www.w3.org/2000/svg">
@@ -208,14 +207,14 @@
                 style="min-height: 90vh">
 
                 <div>
-                    <ul class="flex">
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">Add Account</a></li>
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">View List</a></li>
-                        <li class="mr-10 p-px border-b-2 border-black"><a href="#">See History</a></li>
+                    <ul class="flex tabs">
+                        <li class="active" id="tab-send">Send Money</li>
+                        <li id="tab-list">View List</li>
+                        <li id="tab-history">See History</li>
                     </ul>
 
-                    <div class="flex lg:mt-16 mt-4">
-                        <div class="lg:w-1/2 w-full mx-auto border-t-4 border-blue rounded"
+                    <div class="flex lg:mt-16 mt-4 tabs-list">
+                        <div class="lg:w-1/2 w-full mx-auto border-t-4 border-blue rounded tab-send"
                             style="box-shadow: 0px 0px 44px rgba(69, 83, 199, 0.1);">
                             <h2 class="section-header mb-6 text-center my-8">
                                 Send to a Wallet
@@ -304,6 +303,90 @@
                                 </div>
                             </form>
                         </div>
+                        <table class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-list hidden"
+                            style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
+                            <thead>
+                                <tr class="text-gray-500 uppercase text-left pb-6 pt-10">
+                                    <th class="px-4 pb-4 pt-6">SN</th>
+                                    <th class="px-4 pb-4 pt-6">CATEGORY</th>
+                                    <th class="px-4 pb-4 pt-6">NARRATION</th>
+                                    <th class="px-4 pb-4 pt-6">AMOUNT</th>
+                                    <th class="px-4 pb-4 pt-6">BALANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr class="bg-gray-100 p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="bg-gray-100">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table-auto text-sm w-full border overflow-hidden rounded-md p-4 tab-history hidden"
+                            style="box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15); border-color: #E9E5E5;">
+                            <thead>
+                                <tr class="text-gray-500 uppercase text-left pb-6 pt-10">
+                                    <th class="px-4 pb-4 pt-6">DATE</th>
+                                    <th class="px-4 pb-4 pt-6">CATEGORY</th>
+                                    <th class="px-4 pb-4 pt-6">NARRATION</th>
+                                    <th class="px-4 pb-4 pt-6">AMOUNT</th>
+                                    <th class="px-4 pb-4 pt-6">BALANCE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr class="bg-gray-100 p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="bg-gray-100">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                                <tr class="p-2">
+                                    <td class="px-4 py-4">10 Oct 2019</td>
+                                    <td class="px-4 py-4">Debit</td>
+                                    <td class="px-4 py-4">Payment for Nepa Bill</td>
+                                    <td class="px-4 py-4">#3,500</td>
+                                    <td class="px-4 py-4">#28,500</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 

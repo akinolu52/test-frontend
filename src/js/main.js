@@ -1,7 +1,6 @@
 //main.js file
 
-const toggleList = (control, list, toggle="hidden" ) => {
-    console.log('okay', control)
+const toggleList = (control, list, toggle = "hidden") => {
     let controlItem = document.querySelector(`${control}`);
     if (controlItem) {
         controlItem.addEventListener("click", e => {
@@ -28,6 +27,38 @@ toggleList("label.automate", "span.check", "bg-blue");
 toggleList("label.automate", "span.check", "transform");
 toggleList("label.automate", "span.check", "translate-x-full");
 
+const tabNavigationn = () => {
+    const tabs = document.querySelector('ul.tabs');
+    if (tabs) {
+        tabs.addEventListener("click", e => {
+            let target = e.target; // Clicked element
+            // console.log(target)
+            while (target && target.parentNode !== tabs) {
+                target = target.parentNode; // If the clicked element isn't a direct child
+                if (!target) { return; } // If element doesn't exist
+            }
+            if (target.tagName === 'LI') {
+                let x = tabs.children;
+                for (let index = 0; index < x.length; ++index) {
+                    const element = x[index];
+                    element === target ? element.classList.add('active') : element.classList.remove('active');
+                }
+                const tabList = document.querySelector('div.tabs-list');
+                const incomingTab = document.querySelector(`div.tabs-list>.${target.id}`);
+
+                if (tabList) {
+                    let x = tabList.children;
+                    for (let index = 0; index < x.length; ++index) {
+                        const element = x[index];
+                        element === incomingTab? element.classList.remove('hidden') : element.classList.add('hidden');
+                    }
+                }
+            }
+        });
+    }
+}
+
+tabNavigationn();
 // to toggle password
 let passwordField = document.querySelector("div.toggle-visibility");
 if (passwordField) {

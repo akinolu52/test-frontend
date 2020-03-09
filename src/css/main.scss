@@ -9,7 +9,14 @@ $alt-color: #FFD005;
         border: 0.2px solid #4553C780;
     }
 }
-
+ul.tabs {
+    li {
+        @apply mr-10 p-px border-b-2 border-white cursor-pointer;
+        &.active {
+            @apply border-black;
+        }
+    }
+}
 
 // h2 {
 

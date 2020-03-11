@@ -47,7 +47,9 @@ h5 {
 }
 
 label {
-    @apply block text-blue text-sm font-medium mb-2 leading-7 tracking-wide @screen lg {
+    @apply block text-blue text-sm font-medium mb-2 leading-7 tracking-wide;
+
+    @screen lg {
         @apply text-lg;
     }
 }
@@ -62,7 +64,35 @@ input {
     @apply appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight leading-7;
 
     &:focus {
-        @apply outline-none border-gray-500
+        @apply outline-none border-gray-500;
+    }
+}
+
+table {
+    @apply table-auto text-sm w-full border overflow-hidden rounded-md p-4;
+
+    thead>tr {
+        @apply text-gray-500 uppercase text-left pb-6 pt-10;
+
+        th {
+            @apply px-4 pb-4 pt-6;
+        }
+    }
+
+    tbody {
+        tr {
+            @apply p-2;
+
+            &:nth-of-type(odd) {
+                @apply bg-gray-100;
+            }
+
+            td {
+                @apply px-4 py-4;
+            }
+        }
+
+        @apply ;
     }
 }
 

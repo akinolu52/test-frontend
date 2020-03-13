@@ -12,10 +12,9 @@
 
 <body class="font-avenir antialiased leading-tigh text-normal">
 
-    <section class="w-full h-full flex" style="background-color: #E5E5E5;">
-        <nav
-            class="lg:w-2/12 w-6/12 sticky top-0 lg:block hidden h-screen lg:py-10 py-6 lg:px-4 p-1 shadow-inner auth-nav-list">
-            <a href="index.html" class="flex items-center flex-shrink-0 mb-10">
+    <section class="auth-body-section">
+        <nav class="auth-nav-list lg:block hidden">
+            <a href="index.html" class="mb-10">
                 <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -24,9 +23,9 @@
                 WaveTransfer
             </a>
             <ul>
-                <li class="lg:mb-6 mb-4">
-                    <a href="dashboard.html" class="flex items-center flex-shrink-0">
-                        <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 lg:mr-4 mr-2" stroke="currentColor">
+                <li>
+                    <a href="dashboard.html">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
                             </path>
@@ -34,9 +33,9 @@
                         Dashboard
                     </a>
                 </li>
-                <li class="lg:mb-6 mb-4">
-                    <a href="#" class="flex items-center flex-shrink-0 send-money-nav">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                <li>
+                    <a href="#" class="send-money-nav">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
                             </path>
@@ -50,32 +49,32 @@
                         </div>
                     </a>
 
-                    <ul class="lg:ml-12 ml-3 flex flex-col justify-between send-money-nav-list hidden">
-                        <li class="mt-2 mb-3 text-sm">
-                            <a href="wallet-single.html" class="flex items-center flex-shrink-0">
+                    <ul class="send-money-nav-list hidden">
+                        <li>
+                            <a href="wallet-single.html">
                                 Wallet (Single)
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="wallet-bulk.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="wallet-bulk.html">
                                 Wallet (Bulk)
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="account-single.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="account-single.html">
                                 Bank Account (Single)
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="account-bulk.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="account-bulk.html">
                                 Bank Account (Bulk)
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="lg:mb-6 mb-4">
-                    <a href="payment.html" class="flex items-center flex-shrink-0">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                <li>
+                    <a href="payment.html">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
                             </path>
@@ -83,9 +82,9 @@
                         Payment
                     </a>
                 </li>
-                <li class="lg:mb-6 mb-4">
-                    <a href="history.html" class="flex items-center flex-shrink-0">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                <li>
+                    <a href="history.html">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
                             </path>
@@ -93,9 +92,9 @@
                         History
                     </a>
                 </li>
-                <li class="lg:mb-6 mb-4">
-                    <a href="#" class="flex items-center flex-shrink-0 utility-pay-nav">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                <li>
+                    <a href="#" class=" utility-pay-nav">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
                             </path>
@@ -109,32 +108,32 @@
                         </div>
                     </a>
 
-                    <ul class="lg:ml-12 ml-3 flex flex-col justify-between utility-pay-nav-list hidden">
-                        <li class="mt-2 mb-3 text-sm">
-                            <a href="buy-airtime.html" class="flex items-center flex-shrink-0">
+                    <ul class="utility-pay-nav-list hidden">
+                        <li>
+                            <a href="buy-airtime.html">
                                 Buy Airtime
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="internet-subscription.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="internet-subscription.html">
                                 Internet Subscription
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="electricity.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="electricity.html">
                                 Electricity Bills
                             </a>
                         </li>
-                        <li class="mb-3 text-sm">
-                            <a href="dstv.html" class="flex items-center flex-shrink-0">
+                        <li>
+                            <a href="dstv.html">
                                 DSTV Subscription
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="lg:mb-6 mb-4">
-                    <a href="budget.html" class="flex items-center flex-shrink-0">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 lg:mr-4 mr-2">
+                <li>
+                    <a href="budget.html">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3">
                             </path>
@@ -144,11 +143,10 @@
                 </li>
             </ul>
         </nav>
-        <main class="lg:w-10/12 w-full lg:m-1 rounded-md text-blue">
-            <section class="flex justify-between items-center bg-white lg:px-8 px-4 lg:py-6 py-3 mb-1">
-                <div class="flex items-center">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        class="w-6 h-6 mr-4 block lg:hidden auth-nav">
+        <main class="auth-main">
+            <section>
+                <div>
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="auth-nav">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h7"></path>
                     </svg>
@@ -157,27 +155,25 @@
                     </p>
                 </div>
 
-                <div>
-                    <div class="flex items-center header-auth-nav">
-                        <div style="width: 30px; height: 30px;">
-                            <svg viewBox="0 0 31 31" class="fill-current bg-blue rounded-full shadow-2xl"
-                                xmlns="http://www.w3.org/2000/svg">
+                <div class="right">
+                    <div class="header-auth-nav">
+                        <div>
+                            <svg viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M15.5 0C6.95344 0 0 6.95344 0 15.5C0 24.0466 6.95344 31 15.5 31C24.0466 31 31 24.0466 31 15.5C31 6.95344 24.0466 0 15.5 0ZM15.5 4.52085C19.5951 4.52085 22.9271 7.85281 22.9271 11.948C22.9271 16.0431 19.5951 19.375 15.5 19.375C11.4049 19.375 8.0729 16.043 8.0729 11.9479C8.0729 7.85275 11.4049 4.52085 15.5 4.52085ZM15.5 28.4166C11.2795 28.4166 7.53687 26.3729 5.17839 23.2329C7.76229 21.9897 11.4523 20.6666 15.5 20.6666C19.548 20.6666 23.2383 21.9898 25.8217 23.2328C23.4632 26.3728 19.7206 28.4166 15.5 28.4166Z"
                                     fill="white" />
                             </svg>
                         </div>
-                        <div class="ml-1 cursor-pointer">
+                        <div class="ml-1">
                             <svg width="12" height="7" viewBox="0 0 12 7" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 7L11.1962 0.8125H0.803848L6 7Z" fill="#002C73" />
                             </svg>
                         </div>
                     </div>
-                    <ul class="header-auth-nav-list absolute p-2 z-100 w-32 bottom-0 bg-white flex flex-col justify-between rounded-md hidden"
-                        style="right: 1rem; top: 3.5rem; height: 5rem; box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);">
+                    <ul class="header-auth-nav-list flex hidden">
                         <li>
-                            <a href="profile.html" class="flex items-center flex-shrink-0 text-sm">
+                            <a href="profile.html">
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
                                         d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
@@ -189,7 +185,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="login.html" class="flex items-center flex-shrink-0 text-sm">
+                            <a href="login.html">
                                 <svg class="h-4 w-4 ml-1 mr-3" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.33366 0H6.66699V8.33333H8.33366V0Z" fill="#9EABC5" />
@@ -201,11 +197,9 @@
                             </a>
                         </li>
                     </ul>
-
                 </div>
             </section>
-            <section class="flex flex-col bg-white lg:px-8 px-4 lg:py-6 py-3 lg:mb-1 overflow-y-scroll"
-                style="min-height: 90vh">
+            <section>
 
                 <div>
 

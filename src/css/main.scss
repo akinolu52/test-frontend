@@ -39,21 +39,132 @@ body.modal-active {
     overflow-y: visible !important;
 }
 
-// h2 {
+.bg-pattern {
+    background-image: url('../img/pattern-1.png');
+}
 
-// }
-// h3 {
+section.auth-body-section {
+    @apply flex;
+    background-color: #E5E5E5;
 
-// }
-// p {
+    nav {
+        @apply w-6/12 sticky top-0 h-screen py-6 p-1 shadow-inner;
 
-// }
-// svg {
-//     @apply fill-current;
-// }
-// h1 {
-//     @apply .text-size-3;
-//     @screen lg {
-//       @apply .text-size-5;
-//     }
-//   }
+        @screen lg {
+            @apply w-2/12 py-10 px-4;
+        }
+
+        a {
+            @apply flex items-center flex-shrink-0;
+        }
+
+        &>ul {
+            li {
+                @apply mb-4;
+
+                @screen lg {
+                    @apply mb-6;
+                }
+
+                a>svg {
+                    @apply w-4 h-4 mr-2;
+
+                    @screen lg {
+                        @apply mr-4;
+                    }
+                }
+
+                ul {
+                    @apply ml-3 flex-col justify-between;
+
+                    @screen lg {
+                        @apply ml-12;
+                    }
+
+                    li {
+                        @apply text-sm mb-3;
+
+                        &:first-child {
+                            @apply mt-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main.auth-main {
+        @apply w-full rounded-md text-blue;
+
+        @screen lg {
+            @apply w-10/12 m-1;
+        }
+
+        &>section {
+            @apply flex bg-white px-4 py-3;
+
+            &:nth-child(1) {
+                @apply justify-between items-center mb-1;
+
+                @screen lg {
+                    @apply px-8 py-6;
+                }
+
+                &>div {
+                    &:nth-child(1) {
+                        @apply flex items-center;
+
+                        svg {
+                            @apply w-6 h-6 mr-4 block;
+
+                            @screen lg {
+                                @apply hidden;
+                            }
+                        }
+                    }
+
+                    &.right {
+
+                        &>div {
+                            @apply flex items-center cursor-pointer;
+
+                            &>:nth-child(1) {
+                                width: 30px;
+                                height: 30px;
+
+                                svg {
+                                    @apply fill-current bg-blue rounded-full shadow-2xl;
+                                }
+                            }
+
+                            &>:nth-child(2) {
+                                @apply ml-1;
+                            }
+                        }
+
+                        &>ul {
+                            @apply absolute p-2 z-100 w-32 bottom-0 bg-white flex-col justify-between rounded-md;
+                            right: 1rem;
+                            top: 3.5rem;
+                            height: 5rem;
+                            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);
+
+                            li>a {
+                                @apply flex items-center flex-shrink-0 text-sm;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                min-height: calc(100% - 80px);
+                @apply flex-col;
+
+                @screen lg {
+                    @apply px-8 py-6 mb-1;
+                }
+            }
+        }
+    }
+}

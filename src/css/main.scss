@@ -14,7 +14,11 @@ body {
 }
 
 .container {
-    @apply m-auto px-12;
+    @apply m-auto px-0;
+
+    @screen lg {
+        @apply px-12;
+    }
 }
 
 .h-72 {

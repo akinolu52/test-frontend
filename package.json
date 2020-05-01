@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rm -rf ./src/dist && gulp",
     "build": "rm -rf ./src/dist && gulp img && gulp js && gulp build-html && gulp font",
-    "deploy": "rm -rf ./src/dist && gulp deploy && cd ./src/dist && surge --domain=https://wvt.surge.sh"
+    "deploy": "rm -rf ./src/dist && gulp deploy && cd ./src/dist && surge --domain=https://mock-fe.surge.sh"
   },
   "options": {
     "config": {

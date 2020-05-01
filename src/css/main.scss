@@ -1,170 +1,115 @@
 //All styles can be added here.
 
-$primary-color: #162380;
-$alt-color: #FFD005;
 
-.auth-bg {
-    background-color: #E5E5E5;
+body {
+    @apply font-interlock antialiased leading-tight text-normal text-base;
+}
 
-    form {
-        border: 0.2px solid #4553C780;
+.nav {
+    @apply mr-4 font-medium leading-5;
+
+    &:last-child {
+        @apply ml-5 px-6 py-2 bg-primary text-white rounded-full text-sm;
     }
 }
 
-ul.tabs {
-    li {
-        @apply mr-10 p-px border-b-2 border-white cursor-pointer;
+.container {
+    @apply m-auto px-12;
+}
 
-        &.active {
-            @apply border-black;
+.h-72 {
+    height: 35rem;
+}
+
+section {
+    &.header {
+        background-image: url('../img/Image-1.svg');
+        @apply bg-no-repeat bg-cover bg-center p-4;
+
+        @screen lg {
+            background-size: 30%;
+            background-image: url('../img/creative.png');
+            background-position: -40px top;
+            @apply bg-no-repeat px-20 py-10;
+        }
+    }
+
+    &:not(.header) {
+        @apply p-8;
+
+        @screen lg {
+            @apply py-24 px-0;
+        }
+    }
+
+    &.team {
+        @apply pb-0;
+
+        background-position-y: 150px;
+        background-size: 50%;
+        background-image: url('../img/team.png');
+        @apply bg-no-repeat;
+
+        .inner {
+            background-size: 24%;
+            background-position-y: 200px;
+            background-position-x: right;
+            background-image: url('../img/dot.png');
+            @apply bg-no-repeat;
+
+        }
+    }
+
+    &.contact {
+        @apply pb-24 pt-0 mt-10;
+    }
+
+    &.footer {
+        @apply pt-1 px-10 py-4;
+        background-color: #FAF7FF;
+
+        @screen lg {
+            @apply pt-1 pb-8 py-10;
+        }
+
+        .inner {
+            @apply p-0;
+
+            @screen lg {
+                @apply px-20 py-10;
+            }
+        }
+    }
+
+    &.portfolio {
+        background-color: #502EFF;
+        background-image: url('../img/dot.png');
+        background-size: contain;
+        @apply bg-no-repeat;
+
+        .inner {
+            // background-image: url('../img/dot.png');
+            // background-position: -500px right;
+            // border: 10px solid yellow;
+
+            // @apply bg-no-repeat;
+            h6 {
+                @apply font-medium text-lg;
+            }
         }
     }
 }
 
-section>main {
-    box-shadow: 0px 4px 34px rgba(69, 83, 199, 0.08);
-}
-
-table {
-    border-color: #E9E5E5;
-    box-shadow: 0px 4px 25px rgba(69, 83, 199, 0.15);
-}
-
-.modal {
-    transition: opacity 0.25s ease;
-}
-
-body.modal-active {
+header {
     overflow-x: hidden;
-    overflow-y: visible !important;
 }
 
-.bg-pattern {
-    background-image: url('../img/pattern-1.png');
-}
-
-section.auth-body-section {
-    @apply flex;
-    background-color: #E5E5E5;
-
-    nav {
-        @apply w-6/12 sticky top-0 h-screen py-6 p-1 shadow-inner;
-
-        @screen lg {
-            @apply w-2/12 py-10 px-4;
-        }
-
-        a {
-            @apply flex items-center flex-shrink-0;
-        }
-
-        &>ul {
-            li {
-                @apply mb-4;
-
-                @screen lg {
-                    @apply mb-6;
-                }
-
-                a>svg {
-                    @apply w-4 h-4 mr-2;
-
-                    @screen lg {
-                        @apply mr-4;
-                    }
-                }
-
-                ul {
-                    @apply ml-3 flex-col justify-between;
-
-                    @screen lg {
-                        @apply ml-12;
-                    }
-
-                    li {
-                        @apply text-sm mb-3;
-
-                        &:first-child {
-                            @apply mt-2;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    main.auth-main {
-        @apply w-full rounded-md text-blue;
-
-        @screen lg {
-            @apply w-10/12 m-1;
-        }
-
-        &>section {
-            @apply flex bg-white px-4 py-3;
-
-            &:nth-child(1) {
-                @apply justify-between items-center mb-1;
-
-                @screen lg {
-                    @apply px-8 py-6;
-                }
-
-                &>div {
-                    &:nth-child(1) {
-                        @apply flex items-center;
-
-                        svg {
-                            @apply w-6 h-6 mr-4 block;
-
-                            @screen lg {
-                                @apply hidden;
-                            }
-                        }
-                    }
-
-                    &.right {
-
-                        &>div {
-                            @apply flex items-center cursor-pointer;
-
-                            &>:nth-child(1) {
-                                width: 30px;
-                                height: 30px;
-
-                                svg {
-                                    @apply fill-current bg-blue rounded-full shadow-2xl;
-                                }
-                            }
-
-                            &>:nth-child(2) {
-                                @apply ml-1;
-                            }
-                        }
-
-                        &>ul {
-                            @apply absolute p-2 z-100 w-32 bottom-0 bg-white flex-col justify-between rounded-md;
-                            right: 1rem;
-                            top: 3.5rem;
-                            height: 5rem;
-                            box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.11);
-
-                            li>a {
-                                @apply flex items-center flex-shrink-0 text-sm;
-                            }
-                        }
-                    }
-                }
-            }
-
-            &:nth-child(2) {
-                min-height: calc(100% - 80px);
-                @apply flex-col;
-
-                @screen lg {
-                    @apply px-8 py-6 mb-1;
-                }
-            }
-        }
-    }
+img.header-img {
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+    top: 0px;
+    right: 0;
+    width: 45%;
+    @apply z-0;
 }
